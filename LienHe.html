@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Công an xã Lộc Thành - AI Vì Nhân dân phục vụ</title>
+  <meta name="description" content="Mô hình AI Công an xã Lộc Thành vì Nhân dân phục vụ">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="emblem">★</div>
+    <div>
+      <div class="agency">CÔNG AN XÃ LỘC THÀNH</div>
+      <div class="tagline">AI – VÌ NHÂN DÂN PHỤC VỤ</div>
+    </div>
+  </div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <nav id="nav">
+    <a href="#home">Trang chủ</a>
+    <a href="#ai">Trợ lý AI</a>
+    <a href="#services">Dịch vụ công</a>
+    <a href="#camera">Camera an ninh</a>
+    <a href="#feedback">Phản ánh</a>
+    <a href="#contact">Liên hệ</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <img src="banner-ai.png" alt="Banner AI vì Nhân dân phục vụ" class="hero-img">
+  <div class="hero-overlay">
+    <div class="hero-copy">
+      <span class="pill">CHUYỂN ĐỔI SỐ • AI • PHỤC VỤ NHÂN DÂN</span>
+      <h1>AI – VÌ NHÂN DÂN PHỤC VỤ</h1>
+      <p>Công khai • Minh bạch • Nhanh chóng • Hiệu quả</p>
+      <a class="primary" href="#ai">🤖 Sử dụng Trợ lý AI</a>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div>
+    <span class="eyebrow">MÔ HÌNH SỐ</span>
+    <h2>Công an xã Lộc Thành đồng hành cùng Nhân dân</h2>
+    <p>Ứng dụng công nghệ số và trí tuệ nhân tạo nhằm nâng cao chất lượng phục vụ, hỗ trợ người dân tiếp cận thông tin và phản ánh kiến nghị thuận tiện.</p>
+  </div>
+  <div class="stats">
+    <div><b>24/7</b><span>Hỗ trợ thông tin</span></div>
+    <div><b>AI</b><span>Trợ lý thông minh</span></div>
+    <div><b>4.0</b><span>Chuyển đổi số</span></div>
+  </div>
+</section>
+
+<section id="ai" class="section">
+  <div class="section-title">
+    <span class="eyebrow">TRUNG TÂM AI</span>
+    <h2>Trợ lý AI Công an xã</h2>
+    <p>Nhập câu hỏi để thử giao diện trợ lý. Khi triển khai thực tế, có thể kết nối API AI và cơ sở dữ liệu nội bộ phù hợp.</p>
+  </div>
+  <div class="ai-card">
+    <div class="ai-head"><span class="ai-orb">AI</span><div><b>Trợ lý AI</b><small>Sẵn sàng hỗ trợ</small></div></div>
+    <div id="chat" class="chat">
+      <div class="msg bot">Xin chào! Tôi là Trợ lý AI của Công an xã Lộc Thành. Bạn cần hỗ trợ nội dung gì?</div>
+    </div>
+    <div class="quick">
+      <button onclick="ask('Tôi cần hỏi về thủ tục cư trú.')">Thủ tục cư trú</button>
+      <button onclick="ask('Tôi muốn phản ánh vấn đề an ninh trật tự.')">Phản ánh ANTT</button>
+      <button onclick="ask('Tôi cần liên hệ Công an xã.')">Liên hệ</button>
+    </div>
+    <div class="input-row">
+      <input id="question" placeholder="Nhập câu hỏi của bạn..." onkeydown="if(event.key==='Enter') sendQuestion()">
+      <button onclick="startVoice()" title="Nhập bằng giọng nói">🎤</button>
+      <button class="send" onclick="sendQuestion()">Gửi</button>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section light">
+  <div class="section-title"><span class="eyebrow">TIỆN ÍCH</span><h2>Dịch vụ và thông tin phục vụ Nhân dân</h2></div>
+  <div class="cards">
+    <article><div class="icon">📋</div><h3>Dịch vụ công</h3><p>Tra cứu, hướng dẫn các thủ tục hành chính và thông tin cần thiết.</p><button onclick="notice('Chức năng Dịch vụ công đang được cấu hình.')">Truy cập</button></article>
+    <article id="camera"><div class="icon">📹</div><h3>Camera an ninh</h3><p>Giao diện quản lý, theo dõi hệ thống camera phục vụ bảo đảm ANTT.</p><button onclick="notice('Khu vực Camera yêu cầu tài khoản được cấp quyền.')">Mở hệ thống</button></article>
+    <article><div class="icon">💻</div><h3>Chuyển đổi số</h3><p>Thông tin mô hình số, ứng dụng CNTT, V3 và các sáng kiến chuyển đổi số.</p><button onclick="notice('Đang cập nhật nội dung chuyển đổi số.')">Xem thêm</button></article>
+    <article id="feedback"><div class="icon">📝</div><h3>Phản ánh, kiến nghị</h3><p>Gửi phản ánh, kiến nghị để được tiếp nhận và xử lý theo quy định.</p><button onclick="openFeedback()">Gửi phản ánh</button></article>
+  </div>
+</section>
+
+<section class="section dashboard">
+  <div class="section-title"><span class="eyebrow">BẢNG ĐIỀU HÀNH</span><h2>Mô hình AI – Vì Nhân dân phục vụ</h2></div>
+  <div class="dash-grid">
+    <div class="dash-item"><span>🤖</span><b>Trợ lý AI</b><small>Hỏi đáp thông tin</small></div>
+    <div class="dash-item"><span>📹</span><b>Camera</b><small>Giám sát ANTT</small></div>
+    <div class="dash-item"><span>📊</span><b>Thống kê</b><small>Dữ liệu phục vụ quản lý</small></div>
+    <div class="dash-item"><span>🔐</span><b>An toàn số</b><small>Bảo vệ dữ liệu</small></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div><span class="eyebrow">LIÊN HỆ</span><h2>Công an xã Lộc Thành</h2><p>Địa chỉ: Xã Lộc Thành, tỉnh Đồng Nai</p><p>Điện thoại: <a href="tel:113">113 – Trường hợp khẩn cấp</a></p></div>
+  <div class="contact-box"><b>Vì Nhân dân phục vụ</b><p>Website mô hình trình diễn – có thể tùy chỉnh theo nhu cầu thực tế của đơn vị.</p></div>
+</section>
+</main>
+
+<footer>© 2026 Công an xã Lộc Thành • AI – Vì Nhân dân phục vụ</footer>
+
+<div id="modal" class="modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal()">×</button>
+    <h3>Gửi phản ánh, kiến nghị</h3>
+    <input placeholder="Họ và tên">
+    <input placeholder="Số điện thoại">
+    <textarea placeholder="Nội dung phản ánh..."></textarea>
+    <button class="primary" onclick="notice('Đã ghi nhận nội dung demo. Khi triển khai thật, kết nối biểu mẫu với máy chủ tiếp nhận.')">Gửi phản ánh</button>
+  </div>
+</div>
+
+<script>
+function toggleMenu(){document.getElementById("nav").classList.toggle("show")}
+function notice(t){alert(t)}
+function ask(t){document.getElementById("question").value=t;sendQuestion()}
+function addMessage(t,c){const d=document.createElement("div");d.className="msg "+c;d.textContent=t;document.getElementById("chat").appendChild(d);document.getElementById("chat").scrollTop=99999}
+async function sendQuestion(){const i=document.getElementById("question"),q=i.value.trim();if(!q)return;addMessage(q,"user");i.value="";addMessage("AI đang xử lý câu hỏi...","bot");const loading=document.getElementById("chat").lastChild;try{const r=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:q})});const d=await r.json();loading.remove();if(!r.ok)throw Error(d.error||"Lỗi");addMessage(d.reply||"AI chưa có câu trả lời.","bot");speak(d.reply||"")}catch(e){loading.textContent="Không kết nối được máy chủ AI. Hãy kiểm tra máy chủ và API key.";console.error(e)}}
+function startVoice(){const R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R){alert("Hãy dùng Chrome hoặc Edge để nhập bằng giọng nói.");return}const r=new R();r.lang="vi-VN";r.onresult=e=>{document.getElementById("question").value=e.results[0][0].transcript;sendQuestion()};r.start()}
+function speak(t){if(!t||!speechSynthesis)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang="vi-VN";u.rate=.95;speechSynthesis.speak(u)}
+function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]))}
+function openFeedback(){document.getElementById("modal").classList.add("open")}
+function closeModal(e){if(!e||e.target.id==="modal"||e.target.classList.contains("close"))document.getElementById("modal").classList.remove("open")}
+</script>
+</body>
+</html>

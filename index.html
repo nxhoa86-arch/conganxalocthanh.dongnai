@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Công an xã Lộc Thành - AI Vì Nhân dân phục vụ</title>
+  <meta name="description" content="Mô hình AI Công an xã Lộc Thành vì Nhân dân phục vụ">
+  <link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href=""/></head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div><img src="logo-cong-an-vector-02.jpg" width="70" height="50"></div>
+    <div>
+      <div class="agency">CÔNG AN XÃ LỘC THÀNH</div>
+      <div class="tagline">AI – VÌ NHÂN DÂN PHỤC VỤ</div>
+    </div>
+  </div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <nav id="nav">
+    <a href="#home">Trang chủ</a>
+    <a href="#ai">Trợ lý AI</a>
+    <a href="https://vpcp.dichvucong.gov.vn/p/home/dvc-trang-chu.html" target="_blank">Dịch vụ công</a>
+    <a href="https://www.facebook.com/share/19oJTYgMDp/?mibextid=wwXIfr" target="_blank">Liên hệ</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <img src="banner-ai.png" alt="Banner AI vì Nhân dân phục vụ" class="hero-img">
+  <div class="hero-overlay">
+    <div class="hero-copy">
+      <span class="pill">CHUYỂN ĐỔI SỐ • AI • PHỤC VỤ NHÂN DÂN</span>
+      <h1>AI – VÌ NHÂN DÂN PHỤC VỤ</h1>
+      <p>Công khai • Minh bạch • Nhanh chóng • Hiệu quả</p>
+      <a class="primary" href="#ai">🤖 Sử dụng Trợ lý AI</a>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div>
+    <span class="eyebrow">MÔ HÌNH SỐ</span>
+    <h2>Công an xã Lộc Thành đồng hành cùng Nhân dân</h2>
+    <p>Ứng dụng công nghệ số và trí tuệ nhân tạo nhằm nâng cao chất lượng phục vụ, hỗ trợ người dân tiếp cận thông tin và phản ánh kiến nghị thuận tiện.</p>
+  </div>
+  <div class="stats">
+    <div><b>24/7</b><span>Hỗ trợ thông tin</span></div>
+    <div><b>AI</b><span>Trợ lý thông minh</span></div>
+    <div><b>4.0</b><span>Chuyển đổi số</span></div>
+  </div>
+</section>
+
+<section id="ai" class="section">
+  <div class="section-title">
+    <span class="eyebrow">TRUNG TÂM AI</span>
+    <h2>Trợ lý AI Công an xã</h2>
+    <p>Nhập câu hỏi để được trả lời trực tiếp trên website bằng trí tuệ nhân tạo ChatGPT.</p>
+  </div>
+  <div class="ai-card">
+    <div class="ai-head"><span class="ai-orb"><img src="Công an AI_ Lá chắn công nghệ tương lai.png" width="70" height="50"> </span><div><h2><font color="#FCFCFC">Trợ lý AI</font></h2><b><font color="#FCFCFC">Sẵn sàng hỗ trợ</font></b></div></div>
+    <div id="chat" class="chat">
+      <div class="msg bot">Xin chào! Tôi là Trợ lý AI của Công an xã Lộc Thành. Bạn cần hỗ trợ nội dung gì?</div>
+    </div>
+    <div class="quick">
+      <button onclick="ask('Tôi cần hỏi về thủ tục cư trú.')">Thủ tục cư trú</button>
+      <button onclick="ask('Tôi muốn phản ánh vấn đề an ninh trật tự.')">Phản ánh ANTT</button>
+      <button onclick="ask('Tôi cần xử lý tình huống trộm cắp như thế nào?')">Xử lý trộm cắp</button>
+      <button onclick="ask('Tôi cần liên hệ Công an xã.')">Liên hệ</button>
+    </div>
+    <div class="input-row">
+      <input id="question" placeholder="Nhập câu hỏi của bạn..." onkeydown="if(event.key==='Enter') sendQuestion()">
+      <button onclick="startVoice()" title="Nhập bằng giọng nói">🎤</button>
+      <button class="send" onclick="sendQuestion()">Gửi</button>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section light">
+  <div class="section-title"><span class="eyebrow">TIỆN ÍCH</span><h2>Dịch vụ và thông tin phục vụ Nhân dân</h2></div>
+  <div class="cards">
+    <article><div class="icon">📋</div><h3>Dịch vụ công</h3><p>Tra cứu, hướng dẫn các thủ tục hành chính và thông tin cần thiết.</p><button style="color: white;"><a href="https://vpcp.dichvucong.gov.vn/p/home/dvc-trang-chu.html" target="_blank"><font color="#F4F4F4">Truy cập</font></a></button></article>
+    <article id="camera"><div class="icon"><img src="Quoc_Huy_Viet_Nam_Chuan.png" width="70" height="50"></div><h3>UBND xã Lộc Thành</h3>
+      <p>Xã Lộc Thành là một xã biên giới. Tổng diện tích tự nhiên của xã là 206,10 km2...</p><button><a href="https://locthanh.dongnai.gov.vn/" target="_blank"><font color="White">Xem thêm</font></a></button></article>
+    <article><div class="icon">💻</div><h3>Bình dân học vụ số</h3><p>Phổ cập về chuyển đổi số, kỹ năng số thông qua nền tảng học trực tuyến...</p><button><a href="https://binhdanhocvusocand.mobifone.vn/" target="_blank"><font color="White">Xem thêm</font></a></button></article>
+    <article id="feedback"><div class="icon">📝</div><h3>Phản ánh, kiến nghị</h3><p>Gửi phản ánh, kiến nghị để được tiếp nhận và xử lý theo quy định.</p><button onclick="openFeedback()"><font color="#EFEFEF">Gửi phản ánh</font></button></article>
+  </div>
+</section>
+
+<section class="dashboard">
+  <div class="section-title"><span class="eyebrow">BẢNG ĐIỀU HÀNH</span><h2>Mô hình AI – Vì Nhân dân phục vụ</h2></div>
+  <div class="dash-grid">
+    <div class="dash-item"><span>🤖</span><b><a href="#ai">Trợ lý AI</a></b><small>Hỏi đáp thông tin</small></div>
+    <div class="dash-item"><span>📊</span><b>Số lượng người truy cập</b><small><span id="visitorCount">1,250</span> lượt</small></div>
+    <div class="dash-item"><span>🔐</span><b><a href="https://www.antoanso.com/" target="_blank">An toàn số</a></b><small>Bảo vệ dữ liệu, cảnh báo lừa đảo...</small></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div><span class="eyebrow">LIÊN HỆ</span><h2>Công an xã Lộc Thành</h2><p>Địa chỉ: Xã Lộc Thành, thành phố Đồng Nai</p><p>Điện thoại: <b><font color="#F40C10">02713507007 – Trường hợp khẩn cấp</font></b></p></div>
+  <div class="contact-box"><b>SẴN SÀNG HỖ TRỢ 24/7</b><p>Đường dây nóng và kênh hỗ trợ trực tuyến luôn mở để tiếp nhận kiến nghị phản ánh và hướng dẫn thủ tục liên quan đến công tác an ninh trật tự</p></div>
+</section>
+</main>
+
+<footer>© 2026 Công an xã Lộc Thành • AI – Vì Nhân dân phục vụ</footer>
+
+<div id="modal" class="modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal()">×</button>
+    <h3>Gửi phản ánh, kiến nghị</h3>
+    <input placeholder="Họ và tên">
+    <input placeholder="Số điện thoại">
+    <textarea placeholder="Nội dung phản ánh..."></textarea>
+    <button class="primary" onclick="notice('Đã ghi nhận nội dung phản ánh. Hệ thống sẽ tiếp nhận và xử lý.')">Gửi phản ánh</button>
+  </div>
+</div>
+
+<script>
+// --- CẤU HÌNH API CHATGPT ---
+// Điền OpenAI API Key của bạn vào đây nếu muốn dùng AI tra cứu câu hỏi mở (Ví dụ: "sk-proj-...")
+const OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"; 
+
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("show");
+}
+function notice(t){ alert(t); }
+
+const chat = document.getElementById("chat");
+const question = document.getElementById("question");
+
+function addMessage(text, type){
+  const d = document.createElement("div");
+  d.className = "msg " + type;
+  d.textContent = text;
+  chat.appendChild(d);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function ask(text){
+  question.value = text;
+  sendQuestion();
+}
+
+// 1. DỮ LIỆU TỪ KHÓA TRẢ LỜI TRỰC TIẾP
+// Mỗi phần tử hỗ trợ mảng từ khóa đơn lẻ giúp khớp chính xác hơn
+const knowledgeBase = [
+  {
+    "keys": [
+      "địa chỉ",
+      "dia chi",
+      "số điện thoại",
+      "so dien thoai",
+      "sđt",
+      "sdt",
+      "trực ban",
+      "truc ban",
+      "liên hệ",
+      "lien he",
+      "trụ sở",
+      "tru so"
+    ],
+    "answer": "Trụ sở Công an xã Lộc Thành đặt tại: ấp K' Liêu, xã Lộc Thành, thành phố Đồng Nai. Số điện thoại trực ban tiếp nhận thông tin 24/24h: 02713.507.007. Trong trường hợp khẩn cấp về an ninh trật tự, bà con vui lòng gọi ngay để được hỗ trợ kịp thời. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "thời gian",
+      "thoi gian",
+      "giờ làm việc",
+      "gio lam viec",
+      "tiếp dân",
+      "tiep dan",
+      "mấy giờ",
+      "may gio",
+      "lịch làm việc",
+      "lich lam viec"
+    ],
+    "answer": "Công an xã Lộc Thành tiếp công dân giải quyết thủ tục hành chính trong giờ hành chính từ Thứ Hai đến Thứ Sáu hàng tuần (Buổi sáng: 07h00 - 11h30; Buổi chiều: 13h30 - 17h00), trừ các ngày nghỉ lễ, Tết theo quy định. Riêng công tác trực ban tiếp nhận tố giác, tin báo về an ninh trật tự được duy trì 24/24h tất cả các ngày trong tuần. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "trình báo",
+      "trinh bao",
+      "tố giác",
+      "to giac",
+      "mất trộm",
+      "mat trom",
+      "vi phạm",
+      "vi pham",
+      "tội phạm",
+      "toi pham",
+      "báo án",
+      "bao an"
+    ],
+    "answer": "Căn cứ Điều 145 và Điều 146 Bộ luật Tố tụng hình sự, Công an cấp xã có thẩm quyền tiếp nhận tố giác, tin báo về tội phạm. Bà con có thể thực hiện theo các cách sau: Gọi điện thoại trực tiếp đến trực ban: 02713.507.007. Đến trực tiếp trụ sở Công an xã tại ấp K' Liêu, xã Lộc Thành, thành phố Đồng Nai để cán bộ lập biên bản tiếp nhận. Gửi tin báo trực tuyến qua chức năng Kiến nghị, phản ánh về ANTT trên ứng dụng VNeID. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "đăng ký thường trú",
+      "dang ky thuong tru",
+      "nộp hồ sơ thường trú",
+      "nop ho so thuong tru",
+      "nhập khẩu",
+      "nhap khau",
+      "thường trú ở đâu",
+      "thuong tru o dau"
+    ],
+    "answer": "Theo quy định của Bộ Công an, thủ tục Đăng ký thường trú hiện đã được triển khai dịch vụ công trực tuyến toàn trình. Công an xã không tiếp nhận hồ sơ giấy nộp trực tiếp tại trụ sở. Bà con thực hiện nộp hồ sơ 100% online qua Cổng dịch vụ công Bộ Công an, Cổng DVC Quốc gia hoặc ứng dụng VNeID. Hồ sơ đính kèm bản điện tử gồm: Tờ khai thay đổi thông tin cư trú (Mẫu CT01) và Giấy tờ chứng minh chỗ ở hợp pháp (Sổ hồng/sổ đỏ, hợp đồng mua bán, tặng cho nhà ở hoặc văn bản đồng ý của chủ hộ/chủ sở hữu nếu ở nhờ). Thời hạn giải quyết: Tối đa 07 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ trên cổng dịch vụ công. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "đăng ký tạm trú",
+      "dang ky tam tru",
+      "thủ tục tạm trú",
+      "thu tuc tam tru",
+      "làm tạm trú",
+      "lam tam tru",
+      "khai báo tạm trú",
+      "khai bao tam tru"
+    ],
+    "answer": "Thủ tục Đăng ký tạm trú hiện nay là dịch vụ công trực tuyến toàn trình, công dân không cần mang hồ sơ giấy ra trụ sở mà thực hiện hoàn toàn trực tuyến trên Cổng dịch vụ công Bộ Công an hoặc ứng dụng VNeID. Yêu cầu: Công dân đăng ký trong vòng 60 ngày kể từ ngày chuyển đến sinh sống tại chỗ ở hợp pháp ngoài nơi thường trú. Hồ sơ đính kèm dạng bản chụp/scan: Tờ khai CT01 và giấy tờ chứng minh chỗ ở hợp pháp (Hợp đồng thuê, mượn nhà hoặc văn bản bảo lãnh của chủ nhà). Thời hạn giải quyết: Tối đa 03 ngày làm việc. Kết quả trả dưới dạng văn bản điện tử trên hệ thống. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "thông báo lưu trú",
+      "thong bao luu tru",
+      "khách ở lại",
+      "khach o lai",
+      "ở qua đêm",
+      "o qua dem",
+      "nhà trọ",
+      "nha tro",
+      "khách lưu trú",
+      "khach luu tru"
+    ],
+    "answer": "Thủ tục Thông báo lưu trú được thực hiện trực tuyến toàn trình 100%. Đại diện hộ gia đình/cơ sở lưu trú không cần đến trụ sở Công an xã, mà thực hiện trực tiếp trên điện thoại qua ứng dụng VNeID (mục Thủ tục hành chính -> Thông báo lưu trú) hoặc Cổng dịch vụ công Bộ Công an. Thời hạn: Phải thông báo trước 23h00 cùng ngày (nếu khách đến sau 23h00 thì thông báo trước 08h00 ngày hôm sau). Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "xác nhận thông tin về cư trú",
+      "xac nhan thong tin ve cu tru",
+      "ct07",
+      "ct 07",
+      "giấy xác nhận cư trú",
+      "giay xac nhan cu tru",
+      "xin ct07",
+      "xin ct 07"
+    ],
+    "answer": "Thủ tục cấp Giấy xác nhận thông tin về cư trú hiện đã được thực hiện toàn trình qua mạng. Bà con đăng nhập tài khoản định danh VNeID vào Cổng dịch vụ công Bộ Công an, chọn thủ tục Xác nhận thông tin về cư trú, chọn hình thức nhận bản điện tử hoặc bản giấy gửi qua bưu chính/nhận tại chỗ. Thời hạn giải quyết: Tối đa 01 ngày làm việc (nếu thông tin đã có sẵn trong Cơ sở dữ liệu quốc gia về dân cư). Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "lớn tuổi",
+      "lon tuoi",
+      "không rành công nghệ",
+      "khong ranh cong nghe",
+      "không có điện thoại",
+      "khong co dien thoai",
+      "không biết công nghệ",
+      "khong biet cong nghe",
+      "người cao tuổi",
+      "nguoi cao tuoi"
+    ],
+    "answer": "Đối với người cao tuổi, người có hoàn cảnh đặc biệt hoặc không có phương tiện thực hiện dịch vụ công trực tuyến, Công an xã Lộc Thành bố trí cán bộ và trang thiết bị tại trụ sở (ấp K' Liêu, xã Lộc Thành, thành phố Đồng Nai) để hỗ trợ bà con tạo tài khoản, số hóa hồ sơ và nộp trực tuyến đúng quy định. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "xóa đăng ký thường trú",
+      "xoa dang ky thuong tru",
+      "xóa đăng ký tạm trú",
+      "xoa dang ky tam tru",
+      "xóa thường trú",
+      "xoa thuong tru",
+      "xóa tạm trú",
+      "xoa tam tru",
+      "xóa hộ khẩu",
+      "xoa ho khau"
+    ],
+    "answer": "Căn cứ Điều 24 và Điều 29 Luật Cư trú, công dân bị xóa đăng ký thường trú/tạm trú khi: Chết hoặc có quyết định tuyên bố mất tích/đã chết; định cư ở nước ngoài; đã thôi quốc tịch Việt Nam; vắng mặt liên tục tại nơi thường trú/tạm trú từ 12 tháng trở lên mà không đăng ký tạm trú nơi khác hoặc không khai báo tạm vắng (trừ trường hợp xuất cảnh ra nước ngoài hoặc chấp hành án phạt tù); hoặc chỗ ở hợp pháp đã bị phá dỡ, tịch thu. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "đổi thẻ căn cước",
+      "doi the can cuoc",
+      "thẻ cũ còn hạn",
+      "the cu con han",
+      "bắt buộc đổi",
+      "bat buoc doi",
+      "đổi căn cước mới",
+      "doi can cuoc moi"
+    ],
+    "answer": "Không bắt buộc. Căn cứ Điều 46 Luật Căn cước, các loại thẻ đã cấp trước ngày 01/7/2024 vẫn có giá trị sử dụng đến hết thời hạn ghi trên thẻ. Công dân được đổi sang thẻ Căn cước khi có nhu cầu hoặc khi thẻ cũ hết hạn sử dụng, hư hỏng, thay đổi thông tin hộ tịch. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "độ tuổi làm căn cước",
+      "do tuoi lam can cuoc",
+      "mấy tuổi làm căn cước",
+      "may tuoi lam can cuoc",
+      "bắt buộc làm căn cước",
+      "bat buoc lam can cuoc",
+      "dưới 14 tuổi",
+      "duoi 14 tuoi"
+    ],
+    "answer": "Căn cứ Điều 19 Luật Căn cước: Công dân Việt Nam từ đủ 14 tuổi trở lên bắt buộc phải thực hiện thủ tục cấp thẻ Căn cước. Công dân Việt Nam dưới 14 tuổi được cấp thẻ Căn cước theo nhu cầu (không bắt buộc). Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "căn cước cho trẻ em",
+      "can cuoc cho tre em",
+      "trẻ dưới 14 tuổi",
+      "tre duoi 14 tuoi",
+      "dưới 6 tuổi",
+      "duoi 6 tuoi",
+      "làm căn cước cho con",
+      "lam can cuoc cho con"
+    ],
+    "answer": "Căn cứ Điều 23 Luật Căn cước: Trẻ từ 0 đến dưới 6 tuổi: Người đại diện hợp pháp nộp hồ sơ trực tuyến qua Cổng dịch vụ công; không thu nhận thông tin nhận dạng và sinh trắc học. Trẻ từ đủ 6 đến dưới 14 tuổi: Cha, mẹ hoặc người đại diện hợp pháp đưa trẻ đến cơ quan quản lý căn cước để thu nhận vân tay, ảnh khuôn mặt và sinh trắc học mống mắt. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "mống mắt",
+      "mong mat",
+      "thu nhận mống mắt",
+      "thu nhan mong mat",
+      "chụp mống mắt",
+      "chup mong mat",
+      "ảnh hưởng sức khỏe",
+      "anh huong suc khoe"
+    ],
+    "answer": "Căn cứ Luật Căn cước, thông tin sinh trắc học mống mắt được thu nhận đối với công dân từ đủ 6 tuổi trở lên bằng thiết bị chụp chuyên dụng, không chạm vào mắt, thao tác diễn ra nhanh chóng, hoàn toàn an toàn và không gây bất kỳ tác hại nào cho mắt cũng như sức khỏe. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "kích hoạt vneid",
+      "kich hoat vneid",
+      "vneid mức 2",
+      "vneid muc 2",
+      "định danh mức 2",
+      "dinh danh muc 2",
+      "làm vneid mức 2",
+      "lam vneid muc 2"
+    ],
+    "answer": "Căn cứ Nghị định 69/2024/NĐ-CP, công dân mang theo thẻ Căn cước và dùng số thuê bao di động chính chủ đến cơ quan Công an có thẩm quyền để thu nhận hồ sơ định danh điện tử mức 2 (thu nhận vân tay, ảnh khuôn mặt). Sau khi có tin nhắn phê duyệt từ hệ thống, công dân mở ứng dụng VNeID trên điện thoại để hoàn tất kích hoạt. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "đổi điện thoại",
+      "doi dien thoai",
+      "mất điện thoại",
+      "mat dien thoai",
+      "đăng nhập vneid máy mới",
+      "dang nhap vneid may moi",
+      "đổi máy vneid",
+      "doi may vneid"
+    ],
+    "answer": "Công dân tải ứng dụng VNeID trên điện thoại mới, nhập số định danh cá nhân và mật khẩu. Sau đó chọn xác thực bằng cách: Quét chip trên thẻ Căn cước bằng sóng NFC của điện thoại mới. Hoặc nhận mã xác thực hiển thị trên thiết bị cũ đang đăng nhập. Nếu máy không có NFC hoặc mất máy cũ, công dân đến cơ quan Công an gần nhất để được cấp mã đổi thiết bị. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "người gốc việt nam",
+      "nguoi goc viet nam",
+      "chưa xác định quốc tịch",
+      "chua xac dinh quoc tich",
+      "giấy chứng nhận căn cước",
+      "giay chung nhan can cuoc"
+    ],
+    "answer": "Căn cứ Điều 30 Luật Căn cước, người gốc Việt Nam chưa xác định được quốc tịch đang sinh sống tại Việt Nam từ 06 tháng trở lên được cấp Giấy chứng nhận căn cước. Giấy chứng nhận căn cước có giá trị chứng minh căn cước để thực hiện các giao dịch dân sự, bảo vệ quyền và lợi ích hợp pháp trên lãnh thổ Việt Nam. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "đăng ký xe máy",
+      "dang ky xe may",
+      "bấm biển số",
+      "bam bien so",
+      "công an xã đăng ký xe",
+      "cong an xa dang ky xe",
+      "bấm biển xe máy",
+      "bam bien xe may"
+    ],
+    "answer": "Căn cứ Thông tư 24/2023/TT-BCA, Công an xã Lộc Thành thực hiện thủ tục đăng ký, cấp biển số định danh lần đầu và thủ tục thu hồi đăng ký, biển số xe mô tô, xe gắn máy, xe máy điện của cá nhân, tổ chức có trụ sở hoặc cư trú tại địa phương. Địa điểm tiếp nhận: Trụ sở Công an xã tại ấp K' Liêu, xã Lộc Thành, thành phố Đồng Nai. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "bước bấm biển số",
+      "buoc bam bien so",
+      "thủ tục bấm biển xe",
+      "thu tuc bam bien xe",
+      "quy trình đăng ký xe",
+      "quy trinh dang ky xe"
+    ],
+    "answer": "Quy trình thực hiện gồm 3 bước: Kê khai và nộp lệ phí trước bạ tại cơ quan Thuế hoặc trực tuyến qua Cổng dịch vụ công. Kê khai hồ sơ đăng ký xe trên Cổng dịch vụ công Bộ Công an để lấy mã hồ sơ trực tuyến. Đưa xe và toàn bộ hồ sơ gốc (Hóa đơn GTGT, Phiếu kiểm tra chất lượng xuất xưởng) đến trụ sở Công an xã Lộc Thành (ấp K' Liêu) để kiểm tra thực tế xe và bấm biển số định danh. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "bán xe bán biển",
+      "ban xe ban bien",
+      "chuyển nhượng xe",
+      "chuyen nhuong xe",
+      "giữ lại biển số",
+      "giu lai bien so",
+      "bán xe giữ biển",
+      "ban xe giu bien"
+    ],
+    "answer": "Không. Căn cứ Thông tư 24/2023/TT-BCA về biển số định danh: Khi bán hoặc chuyển nhượng xe, chủ xe bắt buộc phải giữ lại Giấy chứng nhận đăng ký xe và biển số xe, nộp lại cho cơ quan Công an để làm thủ tục thu hồi. Biển số định danh này sẽ được cơ quan Công an lưu giữ trong kho dữ liệu 05 năm để cấp lại khi chủ xe đăng ký xe khác. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "sang tên xe",
+      "sang ten xe",
+      "sang tên xe máy",
+      "sang ten xe may",
+      "mua xe cũ",
+      "mua xe cu",
+      "thủ tục sang tên",
+      "thu tuc sang ten"
+    ],
+    "answer": "Quy trình gồm 2 giai đoạn: Chủ cũ làm thủ tục thu hồi đăng ký, biển số xe tại cơ quan Công an nơi quản lý hồ sơ xe đó. Chủ mới kê khai đăng ký sang tên trên Cổng dịch vụ công Bộ Công an, sau đó đưa xe, chứng từ mua bán hợp pháp và chứng nhận thu hồi đến Công an cấp xã nơi cư trú để làm thủ tục đăng ký, cấp biển số định danh theo thông tin của mình. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "xác nhận hạnh kiểm",
+      "xac nhan hanh kiem",
+      "lý lịch tư pháp",
+      "ly lich tu phap",
+      "xin hạnh kiểm",
+      "xin hanh kiem"
+    ],
+    "answer": "Theo quy định của Luật Lý lịch tư pháp, việc cấp Phiếu lý lịch tư pháp thuộc thẩm quyền của cơ quan Tư pháp (người dân nộp hồ sơ trực tuyến qua ứng dụng VNeID hoặc Cổng DVC Quốc gia). Công an cấp xã không cấp Giấy xác nhận hạnh kiểm riêng lẻ, mà chỉ phối hợp xác nhận tình trạng chấp hành pháp luật tại địa phương khi có yêu cầu hợp lệ của cơ quan có thẩm quyền. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "mở nhà trọ",
+      "mo nha tro",
+      "điều kiện antt",
+      "dieu kien antt",
+      "cho thuê lưu trú",
+      "cho thue luu tru",
+      "kinh doanh nhà trọ",
+      "kinh doanh nha tro"
+    ],
+    "answer": "Căn cứ Nghị định 96/2016/NĐ-CP (sửa đổi, bổ sung), kinh doanh dịch vụ lưu trú là ngành nghề đầu tư kinh doanh có điều kiện về ANTT. Chủ cơ sở cần: Có đăng ký kinh doanh/hộ kinh doanh cá thể hợp pháp. Bảo đảm các điều kiện về an toàn phòng cháy và chữa cháy. Nộp hồ sơ đề nghị cấp Giấy chứng nhận đủ điều kiện về an ninh, trật tự tại cơ quan Công an có thẩm quyền theo phân cấp. Ký cam kết và thực hiện nghiêm việc thông báo lưu trú qua VNeID/phần mềm. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "nhặt được súng",
+      "nhat duoc sung",
+      "nhặt được bom",
+      "nhat duoc bom",
+      "vật liệu nổ",
+      "vat lieu no",
+      "đạn mìn",
+      "dan min"
+    ],
+    "answer": "Căn cứ Luật Quản lý, sử dụng vũ khí, vật liệu nổ và công cụ hỗ trợ: Nghiêm cấm mọi hành vi cưa đục, nhặt gom, tàng trữ, vận chuyển hoặc buôn bán vũ khí, vật liệu nổ. Khi phát hiện, bà con cần: Giữ nguyên hiện trường, cắm biển cảnh báo, không cho người dân lại gần. Gọi ngay trực ban Công an xã Lộc Thành qua số 02713.507.007 để lực lượng chức năng tiếp nhận, xử lý an toàn theo quy định. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "đốt pháo",
+      "dot phao",
+      "sử dụng pháo",
+      "su dung phao",
+      "pháo hoa",
+      "phao hoa",
+      "pháo nổ",
+      "phao no",
+      "ngày tết đốt pháo",
+      "ngay tet dot phao"
+    ],
+    "answer": "Căn cứ Nghị định 137/2020/NĐ-CP (sửa đổi, bổ sung): Công dân từ đủ 18 tuổi có năng lực hành vi dân sự đầy đủ chỉ được sử dụng pháo hoa (loại phát ra hiệu ứng ánh sáng, màu sắc, âm thanh nhưng không gây tiếng nổ) được sản xuất và kinh doanh hợp pháp bởi các doanh nghiệp thuộc Bộ Quốc phòng. Nghiêm cấm tuyệt đối mọi hành vi sản xuất, tàng trữ, buôn bán, đốt pháo nổ, pháo hoa nổ lậu hoặc pháo tự chế. Hành vi vi phạm sẽ bị xử phạt hành chính rất nặng hoặc truy cứu trách nhiệm hình sự. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "hát karaoke ồn",
+      "hat karaoke on",
+      "hàng xóm gây ồn",
+      "hang xom gay on",
+      "loa công suất lớn",
+      "loa cong suat lon",
+      "ồn ào quá giờ",
+      "on ao qua gio"
+    ],
+    "answer": "Căn cứ Nghị định 144/2021/NĐ-CP: Hành vi gây tiếng động lớn, làm ồn ào, huyên náo tại khu dân cư trong khoảng thời gian từ 22h00 đêm hôm trước đến 06h00 sáng hôm sau sẽ bị xử phạt theo quy định. Tiếng ồn vượt quá quy chuẩn kỹ thuật vào ban ngày cũng bị xử phạt theo luật bảo vệ môi trường. Khi bị ảnh hưởng, bà con phản ánh ngay đến trực ban Công an xã để cử lực lượng đến đo kiểm, nhắc nhở và lập biên bản xử lý. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "công an gọi điện",
+      "cong an goi dien",
+      "tải link lạ",
+      "tai link la",
+      "cung cấp otp",
+      "cung cap otp",
+      "lừa đảo vneid",
+      "lua dao vneid"
+    ],
+    "answer": "HOÀN TOÀN KHÔNG. Cơ quan Công an không bao giờ gọi điện yêu cầu người dân cài đặt ứng dụng qua các đường dẫn lạ (link có đuôi .apk), không yêu cầu chuyển tiền hay cung cấp mật khẩu ngân hàng, mã OTP. Đây hoàn toàn là thủ đoạn giả danh công an để chiếm quyền điều khiển điện thoại và rút tiền trong tài khoản. Bà con dứt khoát không làm theo và ngắt máy ngay. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "lỡ chuyển tiền lừa đảo",
+      "lo chuyen tien lua dao",
+      "bị lừa tiền",
+      "bi lua tien",
+      "bị lừa qua mạng",
+      "bi lua qua mang",
+      "chuyển tiền kẻ xấu",
+      "chuyen tien ke xau"
+    ],
+    "answer": "Bà con bình tĩnh thực hiện khẩn cấp các bước sau: Liên hệ ngay đường dây nóng ngân hàng nơi mình gửi tiền để yêu cầu phong tỏa giao dịch/tài khoản khẩn cấp. Chụp lưu lại toàn bộ sao kê biến động số dư, tin nhắn đối thoại, thông tin số tài khoản kẻ lừa đảo và đường link dẫn dụ làm chứng cứ. Đến ngay trụ sở Công an xã Lộc Thành tại: ấp K' Liêu, xã Lộc Thành, thành phố Đồng Nai để trình báo và lập hồ sơ xử lý. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  },
+  {
+    "keys": [
+      "đe dọa đòi nợ",
+      "de doa doi no",
+      "không vay tiền bị đòi nợ",
+      "khong vay tien bi doi no",
+      "bị khủng bố điện thoại",
+      "bi khung bo dien thoai",
+      "đòi nợ khống",
+      "doi no khong"
+    ],
+    "answer": "Khuyến cáo bà con xử lý như sau: Giữ bình tĩnh, tuyệt đối không làm theo yêu cầu chuyển tiền của kẻ xấu. Bật tính năng chặn cuộc gọi rác trên điện thoại; cài đặt ẩn danh bạ, trang cá nhân trên mạng xã hội. Thông báo rõ ràng cho gia đình, bạn bè biết mình bị các đối tượng sử dụng thông tin để đòi nợ khống nhằm cảnh giác. Ghi âm cuộc gọi, lưu ảnh chụp tin nhắn đe dọa mang đến trụ sở Công an xã để trình báo. Để được hướng dẫn cụ thể và chính xác nhất cho trường hợp của mình, bà con vui lòng gọi trực ban Công an xã Lộc Thành qua số 02713.507.007 hoặc đến trực tiếp trụ sở Công an xã để được hướng dẫn chi tiết."
+  }
+];
+
+// 2. HÀM TÌM KIẾM THEO TỪ KHÓA (Chuẩn hóa tiếng Việt có/không dấu)
+function getLocalAnswer(text){
+  // Bỏ dấu tiếng Việt và chuyển về chữ thường để so sánh chuẩn xác
+  const normalizeStr = (str) => str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  const q = normalizeStr(text);
+
+
+  for(const item of knowledgeBase){
+    // Kiểm tra xem có từ khóa nào xuất hiện trong câu hỏi người dùng hay không
+    const match = item.keys.some(k => q.includes(normalizeStr(k)));
+    if(match){
+      return item.answer;
+    }
+  }
+  return null; // Trả về null nếu không khớp từ khóa nào
+}
+
+// 3. GỌI API CHATGPT KHI KHÔNG TÌM THẤY TỪ KHÓA
+async function fetchChatGPTResponse(userQuery) {
+  const systemPrompt = `Bạn là Trợ lý Trí tuệ Nhân tạo chính thức của Công an xã Lộc Thành, thành phố Đồng Nai. 
+Nhiệm vụ của bạn là tư vấn, giải đáp thắc mắc của người dân về thủ tục hành chính, cư trú, VNeID, an ninh trật tự.
+Trả lời bằng tiếng Việt, lịch sự, ngắn gọn và chuẩn mực. Số điện thoại khẩn cấp: 02713507007.`;
+
+  try {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${OPENAI_API_KEY}`
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userQuery }
+        ],
+        temperature: 0.7
+      })
+    });
+
+    if (!response.ok) throw new Error(`API Error: ${response.status}`);
+    const data = await response.json();
+    return data.choices[0].message.content.trim();
+  } catch (error) {
+    console.warn("Lỗi API ChatGPT:", error);
+    return "Cảm ơn bà con đã gửi câu hỏi. Mọi thắc mắc chi tiết xin vui lòng liên hệ Trực ban Công an xã Lộc Thành qua SĐT: 02713.507.007 để được tư vấn và giải đáp.";
+  }
+}
+
+// 4. XỬ LÝ GỬI CÂU HỎI
+async function sendQuestion(){
+  const q = question.value.trim();
+  if(!q) return;
+
+  addMessage(q, "user");
+  question.value = "";
+
+  // Bước A: Kiểm tra từ khóa trong dữ liệu có sẵn trước
+  const directAnswer = getLocalAnswer(q);
+
+  if (directAnswer) {
+    // Trả lời ngay lập tức từ dữ liệu
+    addMessage(directAnswer, "bot");
+    speak(directAnswer);
+  } else {
+    // Bước B: Nếu không thấy từ khóa, hiển thị trạng thái chờ và gọi ChatGPT (hoặc trả lời mặc định)
+    const loading = document.createElement("div");
+    loading.className = "msg bot";
+    loading.textContent = "🤖 Đang suy nghĩ...";
+    chat.appendChild(loading);
+    chat.scrollTop = chat.scrollHeight;
+
+    let reply = "";
+    if (OPENAI_API_KEY && OPENAI_API_KEY !== "YOUR_OPENAI_API_KEY") {
+      reply = await fetchChatGPTResponse(q);
+    } else {
+      await new Promise(r => setTimeout(r, 400));
+      reply = "Trợ lý AI chưa nhận diện được từ khóa này. Bà con vui lòng đặt câu hỏi về: Thủ tục cư trú, Địa chỉ, SĐT trực ban, hoặc Phản ánh ANTT. Hoặc gọi hotline 02713.507.007 để được hỗ trợ.";
+    }
+
+    loading.remove();
+    addMessage(reply, "bot");
+    speak(reply);
+  }
+}
+
+function startVoice(){
+  const R = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!R){
+    alert("Hãy sử dụng Chrome hoặc Edge để nhập bằng giọng nói.");
+    return;
+  }
+  const r = new R();
+  r.lang = "vi-VN";
+  r.interimResults = false;
+  r.maxAlternatives = 1;
+  r.onresult = e => {
+    question.value = e.results[0][0].transcript;
+    sendQuestion();
+  };
+  r.onerror = () => alert("Không nhận được giọng nói. Vui lòng thử lại.");
+  r.start();
+}
+
+function speak(text){
+  if(!("speechSynthesis" in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "vi-VN";
+  u.rate = 0.95;
+  speechSynthesis.speak(u);
+}
+
+function openFeedback(){ document.getElementById("modal").classList.add("open"); }
+function closeModal(e){
+  if(!e || e.target.id === "modal" || e.target.classList.contains("close")){
+    document.getElementById("modal").classList.remove("open");
+  }
+}
+</script>
+</body>
+</html>
