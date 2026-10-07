@@ -67,7 +67,7 @@
       </div>
     </div>
     <div id="chat" class="chat">
-      <div class="msg bot">Xin chào! Tôi là Trợ lý AI của Công an xã Lộc Thành. Bà con chọn nút gợi ý bên dưới hoặc nhập câu hỏi trực tiếp để tôi hỗ trợ nhé!</div>
+      <div class="msg bot">Xin chào! Tôi là Trợ lý BẢO AN AI của Công an xã Lộc Thành. Bà con chọn nút gợi ý bên dưới hoặc nhập câu hỏi trực tiếp để tôi hỗ trợ nhé!</div>
     </div>
     <div class="input-row">
       <input id="question" placeholder="Nhập câu hỏi của bạn..." onkeydown="if(event.key==='Enter') sendQuestion()">
@@ -86,7 +86,7 @@
   </div>
 
   <div class="quick">
-    <b>🪪 Căn cước & Định danh VNeID</b><br>
+    <b>🪪 Căn cước và Định danh VNeID</b> <br>
     <button onclick="ask('Tôi cần hỏi về cấp đổi CCCD')">Cấp đổi Căn cước</button>
     <button onclick="ask('Tôi cần hỏi về độ tuổi làm căn cước')">Độ tuổi làm Căn cước</button>
     <button onclick="ask('Tôi cần hỏi về làm căn cước cho trẻ em')">Căn cước cho trẻ em</button>
@@ -398,7 +398,7 @@ function startVoice(){
   r.start();
 }
 
-function speak(text){
+function speak(){
   if(!("speechSynthesis" in window)) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
