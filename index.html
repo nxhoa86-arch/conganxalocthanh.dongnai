@@ -99,7 +99,7 @@
     <button onclick="ask('Tôi cần hỏi về thủ tục đăng ký xe máy')">Đăng ký xe máy mới</button>
     <button onclick="ask('Tôi cần hỏi về quy trình bấm biển số xe')">Các bước bấm biển số</button>
     <button onclick="ask('Tôi bán xe có được giữ lại biển số không?')">Bán xe giữ lại biển số</button>
-    <button onclick="ask('Tôi cần hỏi về thủ tục sang tên xe máy')">Sang tên xe máy</button>
+    <button onclick="ask('Tôi cần hỏi về thủ tục sang tên xe')">Sang tên xe</button>
   </div>
 
   <div class="quick">
@@ -239,7 +239,7 @@ const knowledgeBase = [
     "answer": "Căn cứ Luật Căn cước: Công dân Việt Nam từ đủ 14 tuổi trở lên BẮT BUỘC phải làm thẻ Căn cước. Công dân dưới 14 tuổi được cấp thẻ Căn cước theo nhu cầu (không bắt buộc)."
   },
   {
-    "keys": ["cccd cho trẻ","căn cước cho trẻ em", "can cuoc cho tre em", "trẻ dưới 14 tuổi", "tre duoi 14 tuoi", "dưới 6 tuổi", "duoi 6 tuoi", "làm căn cước cho con", "lam can cuoc cho con"],
+    "keys": ["trẻ","cccd cho trẻ","căn cước cho trẻ em", "can cuoc cho tre em", "trẻ dưới 14 tuổi", "tre duoi 14 tuoi", "dưới 6 tuổi", "duoi 6 tuoi", "làm căn cước cho con", "lam can cuoc cho con"],
     "answer": "Trẻ từ 0 - dưới 6 tuổi: Cha/mẹ nộp hồ sơ trực tuyến qua Cổng Dịch vụ công, không thu nhận sinh trắc học. Trẻ từ đủ 6 - dưới 14 tuổi: Cha/mẹ đưa trẻ đến cơ quan Công an để thu nhận vân tay, ảnh khuôn mặt và mống mắt."
   },
   {
@@ -251,7 +251,7 @@ const knowledgeBase = [
     "answer": "Tải VNeID trên máy mới -> Đăng nhập tài khoản. Xác thực bằng cách quét chip NFC trên thẻ Căn cước bằng máy mới, hoặc lấy mã OTP từ thiết bị cũ. Nếu máy không hỗ trợ NFC hoặc mất máy cũ, bà con mang Căn cước ra Công an xã để được hỗ trợ cấp mã đổi thiết bị."
   },
   {
-    "keys": ["ô tô", "xe máy", "đăng ký xe máy", "dang ky xe may", "bấm biển số", "bam bien so", "công an xã đăng ký xe", "cong an xa dang ky xe", "bấm biển xe máy", "bam bien xe may"],
+    "keys": ["ô tô","oto", "xe máy", "đăng ký xe", "dang ky xe", "bấm biển số", "bam bien so", "công an xã đăng ký xe", "cong an xa dang ky xe", "bấm biển", "bam bien xe may"],
     "answer": "Công an xã Lộc Thành thực hiện thủ tục đăng ký, cấp biển số định danh lần đầu và thu hồi xe ô tô, mô tô, xe gắn máy, xe máy điện của cá nhân/tổ chức tại địa phương. Địa điểm: Trụ sở Công an xã Lộc Thành (ấp K' Liêu)."
   },
   {
@@ -279,7 +279,7 @@ const knowledgeBase = [
     "answer": "Người dân từ đủ 18 tuổi chỉ được sử dụng PHÁO HOA KHÔNG TIẾNG NỔ do các doanh nghiệp thuộc Bộ Quốc phòng sản xuất. Nghiêm cấm tuyệt đối việc sản xuất, tàng trữ, buôn bán và đốt pháo nổ, pháo hoa nổ tự chế. Vi phạm sẽ bị xử phạt hành chính rất nặng hoặc truy cứu trách nhiệm hình sự."
   },
   {
-    "keys": ["hát karaoke ồn", "hat karaoke on", "hàng xóm gây ồn", "hang xom gay on", "loa công suất lớn", "loa cong suat lon", "ồn ào quá giờ", "on ao qua gio"],
+    "keys": ["phản ánh","hát karaoke ồn", "hat karaoke on", "hàng xóm gây ồn", "hang xom gay on", "loa công suất lớn", "loa cong suat lon", "ồn ào quá giờ", "on ao qua gio"],
     "answer": "Hành vi gây tiếng động lớn, huyên náo tại khu dân cư từ 22h00 đêm đến 06h00 sáng hôm sau là vi phạm pháp luật và sẽ bị xử phạt hành chính theo Nghị định 144/2021/NĐ-CP. Khi bị ảnh hưởng, bà con gọi ngay Trực ban Công an xã 02713.507.007 để lực lượng Công an xã đến kiểm tra, nhắc nhở và xử lý."
   },
   {
